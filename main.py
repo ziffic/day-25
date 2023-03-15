@@ -44,7 +44,7 @@ gray_total = (data["Primary Fur Color"] == "Gray").sum()
 black_total = (data["Primary Fur Color"] == "Black").sum()
 cin_total = (data["Primary Fur Color"] == "Cinnamon").sum()
 data_dict = {
-    "Fur color": ["Gray", "Black", "cin_total"],
+    "Fur color": ["Gray", "Black", "Cinnamon"],
     "Count": [gray_total, black_total, cin_total]
 }
 new_data = pandas.DataFrame(data_dict)
