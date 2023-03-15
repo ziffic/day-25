@@ -16,7 +16,7 @@
 
 import pandas
 
-data = pandas.read_csv("weather_data.csv")
+# data = pandas.read_csv("weather_data.csv")
 
 # data_dict = data.to_dict()
 # temp_list = data["temp"].to_list()
@@ -31,9 +31,21 @@ data = pandas.read_csv("weather_data.csv")
 # monday = data[data.day == "Monday"]
 # print((monday.temp * 9/5)+32)
 
+# data_dict = {
+#     "students": ["Amy", "James", "Angela"],
+#     "scores": [76, 56, 65]
+# }
+# new_data = pandas.DataFrame(data_dict)
+# new_data.to_csv("new_data.csv")
+
+data = pandas.read_csv("2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
+
+gray_total = (data["Primary Fur Color"] == "Gray").sum()
+black_total = (data["Primary Fur Color"] == "Black").sum()
+cin_total = (data["Primary Fur Color"] == "Cinnamon").sum()
 data_dict = {
-    "students": ["Amy", "James", "Angela"],
-    "scores": [76, 56, 65]
+    "Fur color": ["Gray", "Black", "cin_total"],
+    "Count": [gray_total, black_total, cin_total]
 }
 new_data = pandas.DataFrame(data_dict)
-new_data.to_csv("new_data.csv")
+print(new_data)
